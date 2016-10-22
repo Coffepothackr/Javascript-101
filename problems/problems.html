@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problems</title>
+</head>
+<body>
+
+<button onclick="problemOne()">problem 1</button>
+<button onclick="problemTwo()">problem 2</button>
+
+<script type="text/javascript">
+
+
+function problemOne() {
+	var prob1 = 1000;
+	var total = 0;
+
+	for(i=0;i < prob1; i++){
+		if(i % 3 === 0){
+			total += i;
+		}
+		else if(i%5 === 0){
+		total += i;
+		}
+	}	
+	alert("The total of problem 1 is " + total);
+}
+
+function problemTwo() {
+	var x = 1;
+	var xx = 1;
+	var xxx = 0;
+	var total = 0;
+
+	while(xxx < 4000000){
+		xxx = xx + x;
+		if(xxx % 2 === 0){
+		total += xxx;}
+		x = xx;
+		xx = xxx;
+	}
+
+	alert(total);
+}
+
+function problemThree() {
+	
+}
+
+</script>
+
+
+</body>
+</html>
