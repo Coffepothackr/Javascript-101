@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors Lizard & Spock</title>
+
+<body>
+
+	<p id = "player" > Your choice: </p>
+	<p id = "computer" > Computer's choice: </p>
+	<p id = "Result" ></p>
+	<script type="text/javascript">
+
+	var yourchoice = prompt("Rock/Paper/Scissor/Lizard/Spock");
+	var x = Math.floor((Math.random()*5) +1);
+
+
+	if(x === 1){
+		computerchoice = "Rock";
+	} else if (x === 2){
+		computerchoice = "Paper";
+	} else if (x === 3){
+		computerchoice = "Scissor";
+	} else if (x === 4){
+		computerchoice = "Lizard";
+	} else {
+		computerchoice = "Spock";
+	}
+
+	if(yourchoice === "Rock"){
+		if(x===1){game = "Tie";}
+		else if(x===2){game = "You lose";}
+		else if(x===3){game = "You win";}
+		else if(x===4){game = "You win";}
+		else{game = "You lose";}
+	}
+
+	if(yourchoice === "Paper"){
+		if(x===1){game = "You win";}
+		else if(x===2){game = "Tie";}
+		else if(x===3){game = "You lose";}
+		else if(x===4){game = "You lose";}
+		else{game = "You win";}
+	}
+
+	if(yourchoice === "Scissor"){
+		if(x===1){game = "You lose";}
+		else if(x===2){game = "You win";}
+		else if(x===3){game = "Tie";}
+		else if(x===4){game = "You win";}
+		else{game = "You lose";}
+	}
+
+	if(yourchoice === "Lizard"){
+		if(x===1){game = "You lose";}
+		else if(x===2){game = "You win";}
+		else if(x===3){game = "You lose";}
+		else if(x===4){game = "Tie";}
+		else{game = "You win";}
+	}
+
+	if(yourchoice === "Spock"){
+		if(x===1){game = "You win";}
+		else if(x===2){game = "You lose";}
+		else if(x===3){game = "You win";}
+		else if(x===4){game = "You lose";}
+		else{game = "Tie";}
+	}
+		
+	document.getElementById('player').innerHTML += yourchoice;
+	document.getElementById('computer').innerHTML += computerchoice;
+	document.getElementById('Result').innerHTML += game;
+
+	</script>
+	
+
+</head>
+</body>
+</html>
